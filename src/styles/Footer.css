@@ -1,0 +1,18 @@
+.jumbotron {
+    position: fixed;
+    width: 100%;
+    color: rgb(255, 81, 0);
+    text-align: center;
+    background-image: url("http://www.hobart.k12.ok.us/HIGHSCHOOL/hsfaculty/website-background-pattern.jpg");
+    border: 4px dotted blue;
+}
+
+.jumboTitle {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.jumboText {
+    font-size: 28px;
+    font-weight: bold;
+}
