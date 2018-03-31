@@ -10,7 +10,7 @@ class Body extends Component {
 
         
         let images = array.map(image => {
-           return <div className="col-sm-3 imageCards"><div class="card"><div class="card-body"><img key={image} onClick={this.shuffle} src={require(`../images/${image}.png`)} alt="" className="game-images" /></div></div></div>
+           return <div className="col-sm-3 imageCards"><div class="card"><div class="card-body"><button key={image} onClick={this.array} alt=""><img className="game-images" src={require(`../images/${image}.png`)} /></button></div></div></div>
         });
 
         return (
@@ -19,12 +19,24 @@ class Body extends Component {
             </div>
         );
     
-        function shuffle(a) {
-            for (let i = a.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [a[i], a[j]] = [a[j], a[i]];
+        function shuffle(array) {
+            let counter = array.length;
+        
+            // While there are elements in the array
+            while (counter > 0) {
+                // Pick a random index
+                let index = Math.floor(Math.random() * counter);
+        
+                // Decrease counter by 1
+                counter--;
+        
+                // And swap the last element with it
+                let temp = array[counter];
+                array[counter] = array[index];
+                array[index] = temp;
             }
-            return a;
+        
+            return array;
         }
     
     }
