@@ -6,7 +6,7 @@ const Navbar = () => (
     <nav className="navbar navbar-expand-lg">
       <div className="col">Memory Game</div>
       <div className="col">Click an Image to Begin!</div>
-      <div className="col">Score: 0 | Top Score: 0</div>
+      <div className="col"></div>
     </nav>
   </div>
 );
